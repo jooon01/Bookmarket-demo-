@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+
+{% block main_area %}
+
+<div class="container">
+    <br/><br/>
+    <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{ book.image.url }}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"> {{ book.name }}</h5>
+              <p class="card-text"> {{ book.description }}</p>
+
+              <h7> <strike> 정가 : {{ book.price }}원 </strike> </h7> <br/> 
+              <h6> 판매 금액 : {{book.sale_price}}원 </h6>
+              <br/><br/>
+              
+              <a href="{% url 'main' %}" class="btn btn-secondary"> Home </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+{% endblock %}
